@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>umm: Unofficial Moodle Mobile App</title> 
+	<link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
+    <link rel="stylesheet" href="lib/umoodle.css" />
+    <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
+    <script src="lib/jquery.js"></script>
+	<script src="lib/common.js"></script>
+    <script src="lib/jquery.mobile.1.0rc2.js"></script>
+</head> 
+
+<body> 
+
+<div data-role="page" id="camera">
+
+    <div data-role="header">
+        <a href="#" data-rel="back" data-icon="arrow-l">Back</a>
+        <h1>Camera</h1>
+    </div>
+
+    <div data-role="content">
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a"><button type="button" data-theme="c" data-icon="plus">Camera</button></div>
+            <div class="ui-block-b"><button type="button" data-theme="c" data-icon="search">Gallery</button></div>
+        </fieldset>
+
+        <div id="camera-image" class="ui-body ui-body-b" style="background-size:100%;min-height:250px"></div>
+    </div>
+
+    <script type="text/javascript" src="lib/pages/camera.js"></script>
+
+</div>
+
+</body>
+</html>

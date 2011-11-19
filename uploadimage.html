@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>umm: Unofficial Moodle Mobile App</title> 
+	<link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
+    <link rel="stylesheet" href="lib/umoodle.css" />
+    <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
+    <script src="lib/jquery.js"></script>
+	<script src="lib/common.js"></script>
+    <script src="lib/jquery.mobile.1.0rc2.js"></script>
+</head> 
+
+<body> 
+
+<div data-role="page" id="page-uploadimage">
+
+    <div data-role="header">
+        <a href="upload.html" data-icon="arrow-l">Back</a>
+        <h1>Upload</h1>
+    </div>
+
+    <div data-role="content">
+       
+       <div id="camera-image" class="ui-body ui-body-b" style="background-size:100%;min-height:250px"></div>
+       
+       <button id="bupload" type="button" data-theme="c" data-icon="arrow-u">Upload</button>
+       
+    </div>
+
+    <script type="text/javascript" src="lib/pages/uploadimage.js"></script>
+    
+</div>
+
+</body>
+</html>
