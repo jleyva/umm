@@ -8,7 +8,8 @@ This application is intended and have been designed to be easily customizable by
 This application is not a replacement or improvement of the official app for iPhone (and Androi when available)
 
 Credits:
-
+Juan Leyva <http://twitter.com/#!/jleyvadelgado>
+http://moodle.org/user/profile.php?id=49568
 
 
 Current apps download links:
