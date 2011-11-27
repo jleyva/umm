@@ -105,6 +105,19 @@ If you want integrate your app with your mobile device (accelerometer, camera, c
 http://www.phonegap.com/
 
 
+VERSIONS:
+---------
+
+Current: 0.8 alpha 
+
+Known bugs and issues:
+----------------------
+Upload of images and records may fail
+Do not work offline
+Contacts are saved in your Google account contacts (Android) This is a Phonegap bug
+Profile users image are not displayed (This is a Moodle issue)
+
+
 
 
 
