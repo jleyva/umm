@@ -4,8 +4,10 @@ umm: Unofficial Moodle Mobile app
 This is an unofficial clone of the Moodle Mobile app for iPhone that works on Android and Blackberry devices.
 It should work also on iPhone and iPad.
 
-This application is intended and has been designed to be easily customizable by Institutions (University, corp..). This application uses common web technologies (HTML5 + CSS3 + JavaScript)
-This application is not a replacement or improvement of the official app for iPhone (and Androi when available). It has beend designed to be easily customizable and extendable using web technologies.
+This application is intended and has been designed to be easily customizable by Institutions (University, corp..). This application uses common web technologies (HTML5 + CSS3 + JavaScript) and the high level multiplatform mobile Javascript framework Phonegap.
+Phonegap enables you to build your app once with web-standards and deploy to multiple platforms.
+
+Please note that this app is not a replacement or improvement of the official app for iPhone (and Android when available). It has beend designed to be easily customizable and extendable using web technologies by anyone.
 
 Technologies used:
 
@@ -36,16 +38,23 @@ https://build.phonegap.com/apps/49110/error/blackberry
 Testing the app in a computer:
 -----------------------------
 
+OPTION 1:
 Requeriments: Google Chrome browser + Ripple mobile enviroment emulator plugin (http://ripple.tinyhippos.com/)
 
 You must run Google Chrome in Unsafe mode adding this params: --allow-file-access-from-files --disable-web-security
 
-IMPORTANT: I strong recommend to create a new link or application launch called "Google Unsafe" and use it only for testing the app
+IMPORTANT: I strong recommend you to create a new link or application launch called "Google Unsafe" and use it only for testing the app
 
 "Path to chrome\chrome.exe" --allow-file-access-from-files --disable-web-security
 
 Open the index.html file in the Google Chrome unsafe and click on the Ripple icon to activate the emulator
 
+Once opened in the Ripple settings block change Cross Domain Proxy to Disabled
+
+Please note that some functionallities (camera, audio recording, contact) will not work in the emulator
+
+OPTION 2:
+Install the Android, BlackBerry or iPhone SDK and follow instructions in http://phonegap.com/start/
 
 Configuring Moodle for using the application:
 ---------------------------------------------
