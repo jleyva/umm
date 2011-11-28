@@ -65,6 +65,8 @@ Administration -> Plugins -> Web Services -> Protocols -> Enable REST
 
 Administration -> Users -> Permission -> Define roles -> Edit the Authenticated user role -> Allow webservice/rest:use 
 
+Administration -> Security  -> Site policies -> Change the server upload limit. It can't be Server limit. There is a bug in Moodle Web Services see (http://tracker.moodle.org/browse/MDL-30496)
+
 
 Building this app for iPhone:
 -----------------------------
@@ -112,10 +114,10 @@ Current: 0.8 alpha
 
 Known bugs and issues:
 ----------------------
-Upload of images and records may fail
+Upload of images and records may fail if your max upload file size server setting is set to No limit. (This is a Moodle issue) See http://tracker.moodle.org/browse/MDL-30496 
 Do not work offline
 Contacts are saved in your Google account contacts (Android) This is a Phonegap bug
-Profile users image are not displayed (This is a Moodle issue)
+Profile users image are not displayed (This is a Moodle issue) See http://tracker.moodle.org/browse/MDL-30495
 
 
 
