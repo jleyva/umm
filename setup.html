@@ -2,36 +2,47 @@
 <html> 
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>umm: Unofficial Moodle Mobile App</title> 
-	<link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
-	<link rel="stylesheet" href="lib/umoodle.css" />
-	<script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
-	<script src="lib/jquery.js"></script>
-	<script src="lib/xml2json.js"></script>
-	<script src="lib/common.js"></script>
-	<script src="lib/jquery.mobile.1.0rc2.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>umm: Unofficial Moodle Mobile App</title> 
+    <link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
+    <link rel="stylesheet" href="lib/umoodle.css" />
+    <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/xml2json.js"></script>
+    <script src="lib/md5.js"></script>
+    <script src="lib/common.js"></script>
+    <script src="lib/jquery.mobile.1.0rc2.js"></script>
 </head> 
 
 <body> 
 
 <div data-role="page" id="page-setup">
-	
-	<div data-role="header" data-position="fixed">
-		<a href="mysite.html" id="bback" data-role="button" data-icon="arrow-l">Back</a>
-		<h1>Settings</h1>
-		<a id="bsave" data-icon="check" data-role="button">Save</a>
-	</div>
-
-	<div data-role="content">
-		<input type="checkbox" name="debug_on" id="debug_on" class="custom" />
-		<label for="debug_on">Enable debug</label>
-        
-	</div>
     
-	<script type="text/javascript" src="lib/pages/setup.js"></script>
+    <div data-role="header" data-position="fixed">
+        <a href="mysite.html" id="bback" data-role="button" data-icon="arrow-l">Back</a>
+        <h1>Settings</h1>
+        <a id="bsave" data-icon="check" data-role="button">Save</a>
+    </div>
+
+    <div data-role="content">
+        <input type="checkbox" name="debug_on" id="debug_on" class="custom" />
+        <label for="debug_on">Enable debug</label>
 	
+	<input type="checkbox" name="transitions_on" id="transitions_on" class="custom" />
+        <label for="transitions_on">Enable page transitions</label>
+	
+	<div data-role="fieldcontain">
+	<label for="cache_expiration">Cache time (seconds):</label>
+ 	<input type="range" name="cache_expiration" id="cache_expiration" value="0" min="0" max="300"  />
+	</div>
+	
+	<p><a href="#" id="bpurge" data-role="button">Purge caches</a></p>
+        
+    </div>
+    
+    <script type="text/javascript" src="lib/pages/setup.js"></script>
+    
 </div><!-- /page -->
 
 </body>

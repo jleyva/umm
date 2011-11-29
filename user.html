@@ -2,16 +2,17 @@
 <html> 
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>umm: Unofficial Moodle Mobile App</title> 
-	<link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>umm: Unofficial Moodle Mobile App</title> 
+    <link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
     <link rel="stylesheet" href="lib/umoodle.css" />
     <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/xml2json.js"></script>
+    <script src="lib/md5.js"></script>
     <script src="lib/common.js"></script>
-	<script src="lib/jquery.mobile.1.0rc2.js"></script>
+    <script src="lib/jquery.mobile.1.0rc2.js"></script>
 </head> 
 
 <body> 
@@ -19,11 +20,11 @@
 <div data-role="page" id="page-user">
 
     <div data-role="header">
-		<a href="users.html" id="bback" data-icon="arrow-l">Back</a>
+        <a href="users.html" id="bback" data-icon="arrow-l">Back</a>
         <h1>Details</h1>        
-	</div><!-- /header -->
+    </div><!-- /header -->
 
-	<div data-role="content">	        
+    <div data-role="content">            
         <div id="userinfo">
             <p><img id="userimage" src=""><strong><span id="userfullname"></span></strong></p>
         </div>
@@ -43,13 +44,13 @@
         <p><b>City:</b> <span id="city"></span></p>
         </div>
         
-		<a href="sendmessage.html" data-role="button" >Send a message</a>
+        <a href="sendmessage.html" data-role="button" >Send a message</a>
         <a href="addnote.html" data-role="button" data-inline="true">Add a note</a>
         <a id="baddcontact" data-role="button" data-inline="true">Add as contact</a>
-	</div><!-- /content -->
+    </div><!-- /content -->
     
     <script type="text/javascript" src="lib/pages/user.js"></script>
-	
+    
 </div><!-- /page -->
 
 </body>

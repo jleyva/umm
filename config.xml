@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns		= "http://www.w3.org/ns/widgets"
-	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.phonegap.getting.started"
-	version 	= "1.0.0">
+<widget xmlns        = "http://www.w3.org/ns/widgets"
+    xmlns:gap    = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.getting.started"
+    version     = "1.0.0">
 
-	<name>umm: Unofficial Moodle Mobile app</name>
+    <name>umm: Unofficial Moodle Mobile app</name>
 
-	<description>
-		A clone of the official Moodle Mobile app (iPhone)
-	</description>
+    <description>
+        A clone of the official Moodle Mobile app (iPhone)
+    </description>
 
-	<author href="http://twitter.com/jleyvadelgado"
-		email="juanleyvadelgado@gmail.com">
-		Juan Leyva
-	</author>
+    <author href="http://twitter.com/jleyvadelgado"
+        email="juanleyvadelgado@gmail.com">
+        Juan Leyva
+    </author>
 
-	<gap:platforms>
-		<gap:platform name="android" minVersion="2.1" />
-		<gap:platform name="blackberry" project="widgets"/>
-	</gap:platforms>
+    <gap:platforms>
+        <gap:platform name="android" minVersion="2.1" />
+        <gap:platform name="blackberry" project="widgets"/>
+    </gap:platforms>
 
-	<icon src="icon.png" width="57" height="57" gap:role="default" />
-	<icon src="icon72.png" width="72" height="72" />
-	<icon src="icon48.png" width="48" height="48" />
-	<icon src="icon36.png" width="36" height="36" />
+    <icon src="icon.png" width="57" height="57" gap:role="default" />
+    <icon src="icon72.png" width="72" height="72" />
+    <icon src="icon48.png" width="48" height="48" />
+    <icon src="icon36.png" width="36" height="36" />
 
-	<feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
-	<feature name="http://api.phonegap.com/1.0/contacts"/>
-	<feature name="http://api.phonegap.com/1.0/media"/>
-	
-	<!-- sample preference specification -->
-	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    
+    <!-- sample preference specification -->
+    <!-- <preference name="autorotate" value="false" readonly="true"/> -->
 </widget>

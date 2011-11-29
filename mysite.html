@@ -2,23 +2,24 @@
 <html> 
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>umm: Unofficial Moodle Mobile App</title> 
-	<link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>umm: Unofficial Moodle Mobile App</title> 
+    <link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
     <link rel="stylesheet" href="lib/umoodle.css" />
     <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/xml2json.js"></script>
+    <script src="lib/md5.js"></script>
     <script src="lib/common.js"></script>
-	<script src="lib/jquery.mobile.1.0rc2.js"></script>
+    <script src="lib/jquery.mobile.1.0rc2.js"></script>
 </head> 
 
 <body> 
 
 <div data-role="page" id="page-mysite">
 
-	<div data-role="content">	        
+    <div data-role="content">            
         <h1 id="sitename"></h1>
         <div class="whiteroundtable">
             <div id="maingrid" class="ui-grid-a">
@@ -66,17 +67,17 @@
             </div>
         </div>  
 
-	</div><!-- /content -->
-	
-    <div data-role="footer" data-position="fixed" data-theme="o">		
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed" data-theme="o">        
         <fieldset class="ui-grid-a">
             <div class="ui-block-a"><a href="setup.html" data-role="button" data-icon="refresh" data-iconpos="notext" data-theme="e"></a></div>
-            <div class="ui-block-b"><a href="mysites.html" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="e"></a></div>	   
+            <div class="ui-block-b"><a href="mysites.html" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="e"></a></div>       
         </fieldset>
-	</div>    
+    </div>    
     
     <script type="text/javascript" src="lib/pages/mysite.js"></script>
-	
+    
 </div><!-- /page -->
 
 </body>

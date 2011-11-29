@@ -2,16 +2,17 @@
 <html> 
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>umm: Unofficial Moodle Mobile App</title> 
-	<link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>umm: Unofficial Moodle Mobile App</title> 
+    <link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
     <link rel="stylesheet" href="lib/umoodle.css" />
     <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/xml2json.js"></script>
+    <script src="lib/md5.js"></script>
     <script src="lib/common.js"></script>
-	<script src="lib/jquery.mobile.1.0rc2.js"></script>
+    <script src="lib/jquery.mobile.1.0rc2.js"></script>
 </head> 
 
 <body> 
@@ -19,20 +20,20 @@
 <div data-role="page" id="page-sendmessage">
 
     <div data-role="header">
-		<a href="user.html" id="bback" data-icon="arrow-l">Back</a>
+        <a href="user.html" id="bback" data-icon="arrow-l">Back</a>
         <h1>Send a message</h1>     
         <a id="bsend" data-icon="check" data-role="button">Send</a>        
-	</div><!-- /header -->
+    </div><!-- /header -->
 
-	<div data-role="content">	        
+    <div data-role="content">            
         <label for="textarea-a">Message:</label>
         <textarea name="textarea" id="textarea-a">
         
         </textarea>
-	</div><!-- /content -->
+    </div><!-- /content -->
     
     <script type="text/javascript" src="lib/pages/sendmessage.js"></script>
-	
+    
 </div><!-- /page -->
 
 </body>
