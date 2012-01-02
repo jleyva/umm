@@ -20,24 +20,29 @@
 <div data-role="page" id="page-setup">
     
     <div data-role="header" data-position="fixed">
-        <a href="mysite.html" id="bback" data-role="button" data-icon="arrow-l">Back</a>
+        <a href="mysite.html" id="bback" data-role="button" data-icon="arrow-l"><span data-lang="back">Back</span></a>
         <h1>Settings</h1>
-        <a id="bsave" data-icon="check" data-role="button">Save</a>
+        <a id="bsave" data-icon="check" data-role="button"><span data-lang="save">Save</span></a>
     </div>
 
     <div data-role="content">
+    
+    <label for="select-choice-0" class="select"><span data-lang="language">Language</span>:</label>
+    <select name="select-choice-0" id="select-choice-lang">       
+    </select>
+    
         <input type="checkbox" name="debug_on" id="debug_on" class="custom" />
-        <label for="debug_on">Enable debug</label>
+        <label for="debug_on"><span data-lang="enabledebug">Enable debug</span></label>
 	
 	<input type="checkbox" name="transitions_on" id="transitions_on" class="custom" />
-        <label for="transitions_on">Enable page transitions</label>
+        <label for="transitions_on"><span data-lang="enablepagetransitions">Enable page transitions</span></label>
 	
 	<div data-role="fieldcontain">
-	<label for="cache_expiration">Cache time (seconds):</label>
+	<label for="cache_expiration"><span data-lang="cachetimeseconds">Cache time (seconds)</span>:</label>
  	<input type="range" name="cache_expiration" id="cache_expiration" value="0" min="0" max="300"  />
 	</div>
 	
-	<p><a href="#" id="bpurge" data-role="button">Purge caches</a></p>
+	<p><a href="#" id="bpurge" data-role="button"><span data-lang="purgecaches">Purge caches</span></a></p>
         
     </div>
     
