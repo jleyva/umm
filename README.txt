@@ -19,9 +19,9 @@ Please note that this app is not a replacement or improvement of the official ap
 === Credits ===
 
 Juan Leyva <http://twitter.com/#!/jleyvadelgado>
-
 http://moodle.org/user/profile.php?id=49568
 
+Catalan translation: Antonio Piedras (Universitat de Barcelona)
 
 == Testing the app in a computer ==
 
