@@ -20,10 +20,10 @@
         <gap:platform name="blackberry" project="widgets"/>
     </gap:platforms>
 
-    <icon src="icon.png" width="57" height="57" gap:role="default" />
-    <icon src="icon72.png" width="72" height="72" />
-    <icon src="icon48.png" width="48" height="48" />
-    <icon src="icon36.png" width="36" height="36" />
+    <icon src="pix/i/icon.png" width="57" height="57" gap:role="default" />
+    <icon src="pix/i/icon72.png" width="72" height="72" />
+    <icon src="pix/i/icon48.png" width="48" height="48" />
+    <icon src="pix/i/icon36.png" width="36" height="36" />
 
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
