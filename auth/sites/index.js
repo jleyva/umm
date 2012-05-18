@@ -4,6 +4,8 @@ $("#page-addsite").live('pageshow',function() {
 
     UMM.setupPage();
     UMM.logInfo("Page show fired");
+    
+    console.log(UMM.cfg);
 
     $("#bcancel").click(function(){
         window.close();
@@ -62,11 +64,10 @@ $("#page-addsite").live('pageshow',function() {
 
         function addSite(site) {
 
-            var siteId = UMM.insertRecord('sites',JSON.stringify(sites));
-            UMM.insertRecord('tokens',JSON.stringify(tokens));
-
-            UMM.setConfig('current_site', siteId, 'umm');
-            $.mobile.changePage("mysite.html", 'slideup');
+            // Call to the API for complete the user login.            
+            UMM.completeUserLogin(site, mytoken);
+            
+            $.mobile.changePage(UMM.cfg.wwwroot + "/main.html", 'slideup');
         }
 
         $.mobile.showPageLoadingMsg();
@@ -74,7 +75,7 @@ $("#page-addsite").live('pageshow',function() {
             {
                 username: username,
                 password: password,
-                service: "moodle_mobile_app"
+                service: UMM.cfg.wsservice
             }
             ,function(json) {
                 if(typeof(json.token) != 'undefined'){

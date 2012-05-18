@@ -6,14 +6,14 @@ $("#page-index").live('pagebeforeshow',function() {
         UMM.init();
 
         // First we check if the user is currently authenticated.
-        var auth = UMM.getConfig("umm", "user_authenticated");
+        var loggedin = UMM.cfg.current_site && UMM.cfg.current_token;
 
-        if(parseInt(auth) == 1) {
+        if(loggedin) {
             $.mobile.changePage("main.html");
         }
         else {
             // Redirect the user to the current mobile authentication index.
-            $.mobile.changePage(UMM.auth_index());
+            $.mobile.changePage(UMM.authIndex());
         }
     });
 

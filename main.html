@@ -1,93 +1,34 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>umm: Unofficial Moodle Mobile App</title> 
-    <link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
-    <link rel="stylesheet" href="lib/umoodle.css" />
-    <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
-    <script src="lib/jquery.js"></script>
-    <script src="lib/xml2json.js"></script>
-    <script src="lib/md5.js"></script>
-    <script src="lib/common.js"></script>
-    <script src="lib/jquery.mobile.1.0rc2.js"></script>
-</head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>umm: Unofficial Moodle Mobile App</title>
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" id="debugscript" data-wwwpath="." src="lib/debug.js"></script>
+</head>
 
-<body> 
+<body>
 
 <div data-role="page" id="page-mysite">
 
-    <div data-role="content">            
+    <div data-role="content">
         <h1 id="sitename"></h1>
         <div class="whiteroundtable">
-            <div id="maingrid" class="ui-grid-a">
-                <div class="ui-block-a">
-                    <a href="upload.html" style="text-decoration: none">
-                        <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">
-                            <br/>                        
-                            <img src="custom/pix/upload.png"><br/>
-                            <span data-lang="upload">Upload</span>                                                                        
-                            <br/>
-                        </span>
-                    </a>
-                </div>
-                <div class="ui-block-b">
-                    <a href="participants.html" style="text-decoration: none">    
-                        <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">
-                        <br/>                        
-                        <img src="custom/pix/participants.png"><br/>
-                        <span data-lang="participants">Participants</span>                                                                       
-                        <br/>
-                        </span>
-                    </a>
-                </div>
-		<div class="ui-block-a">
-                    <a href="contents.html" style="text-decoration: none">
-                        <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">
-                            <br/>                        
-                            <img src="custom/pix/contents.png"><br/>
-                            <span data-lang="contents">Contents</span>                                                                        
-                            <br/>
-                        </span>
-                    </a>
-                </div>
-                <div class="ui-block-b">
-                    <a href="#" id="linkweb" rel="external" target="_blank" style="text-decoration: none">
-                        <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">
-                            <br/>
-                            <img src="custom/pix/web.png"><br/>
-                            <span data-lang="web">Web</span>
-                            <br/>
-                        </span>
-                    </a>
-                </div>
-                <div class="ui-block-a">
-                    <a href="http://docs.moodle.org/" rel="external" target="_blank" style="text-decoration: none">
-                        <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">
-                            <br/>                        
-                            <img src="custom/pix/help.png"><br/>
-                            <span data-lang="help">Help</span>                                                                      
-                            <br/>
-                        </span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>  
-
+			<div id="appbuttons" />
+        </div>
     </div><!-- /content -->
-    
-    <div data-role="footer" data-position="fixed" data-theme="o">        
+
+    <div data-role="footer" data-position="fixed" data-theme="o">
         <fieldset class="ui-grid-a">
-            <div class="ui-block-a"><a href="setup.html" data-role="button" data-icon="refresh" data-iconpos="notext" data-theme="e"></a></div>
-            <div class="ui-block-b"><a href="mysites.html" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="e"></a></div>       
+            <div class="ui-block-a"><a href="admin/index.html" data-role="button" data-icon="refresh" data-iconpos="notext" data-theme="e"></a></div>
+            <div class="ui-block-b"><a href="mysites.html" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="e"></a></div>
         </fieldset>
-    </div>    
-    
-    <script type="text/javascript" src="lib/pages/mysite.js"></script>
-    
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+
 </div><!-- /page -->
 
 </body>

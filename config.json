@@ -1,4 +1,9 @@
 {
 "auth" : "sites",
-"lang" : "en"
+"cache_time" : 300000,
+"lang" : "en",
+"modules" : "upload,participants,contents,web,help",
+"theme" : "standard",
+"theme_mod_icons": 0,
+"wsservice" : "moodle_mobile_app"
 }
