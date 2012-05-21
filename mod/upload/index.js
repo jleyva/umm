@@ -22,12 +22,12 @@
             options.fileName = mediaFiles[i].name;
             options.mimeType = null;
             
-            moodleUploadFile(mediaFiles[i].fullPath, options, function(){ popMessage("File uploaded"); }, function(){ popErrorMessage('Upload failed'); }); 
+            UMM.moodleUploadFile(mediaFiles[i].fullPath, options, function(){ UMM.popMessage("File uploaded"); }, function(){ UMM.popErrorMessage('Upload failed'); }); 
         }       
     }
  
     function captureError(error) {
-        popErrorMessage('Audio recording failed');
+        UMM.popErrorMessage('Audio recording failed');
     }
     
     $("#brecord").click(function(){

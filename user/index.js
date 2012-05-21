@@ -1,58 +1,36 @@
 (function() {
 
-    $("#page-user").live('pageshow',function() {
-                
-        setupPage();
-        logInfo("Page show fired");
+    $("#page-users").live('pageshow',function() {        
         
-        var currentUser;
+        UMM.setupPage();
+        UMM.logInfo("Page show fired");
         
-        var users = getCacheElements('users');        
-        $.each(users, function(index, user){                         
-            if(user.id+"" == localStorage.getItem('current_user')){
+        function listUsers(users){
+            UMM.pushCacheElements('users',users);
+            $("#lusers li").remove();
+            
+            $.each(users, function(index,user){
                 // TODO - Replace when bug related with cookies fixed
                 user.profileimageurl = "http://demo.moodle.net/theme/image.php?theme=standard&image=u%2Ff1";
+                
+                $("#lusers").append('<li><a href="user.html" id="user'+user.id+'" data-userid="'+user.id+'"><img src="'+user.profileimageurl+'">'+user.fullname+'</a></li>');                
+            });
             
-                $("#userfullname").html(user.fullname);
-                $("#userimage").attr('src', user.profileimageurl);
-                $("#descripcion").html(user.descripcion);
-                $("#email").html(user.email);
-                $("#country").html(user.country);
-                $("#city").html(user.city);
-                // This is a break
-                currentUser = user;
-                return false;                
-            }
-        });
+            $('[data-userid]').click(function(){                        
+                localStorage.setItem("current_user",$(this).attr('data-userid'))
+                $.mobile.changePage("user.html");
+            });
+            
+            $('#lusers').listview('refresh');        
+        }
         
-        $("#baddcontact").click(function(){
-            logInfo("Adding a contact");
-            
-            var myContact = navigator.contacts.create();
-            myContact.displayName = currentUser.fullname;
-            myContact.nickname = currentUser.fullname;
-             
-            var name = new ContactName();
-            name.givenName = currentUser.firstname;
-            name.familyName = currentUser.lastname;
-            myContact.name = name;
-            
-            var emails = [1];
-            emails[0] = new ContactField('work', currentUser.email, true);
-            myContact.emails = emails;
-            
-            var photos = [1];
-            photos[0] = new ContactField('url', currentUser.profileimageurl, true);
-            myContact.photos = photos;
-            
-            logInfo("Saving contact ("+myContact.displayName+"  "+myContact.nickname+"), calling phonegap");
-            myContact.save(
-                function(contact){ popMessage('Contact added'); },
-                function(contactError){ popErrorMessage('Unexpected error. Contact not added: '+contactError); }
-            );
-            logInfo("End of saving contact, phonegap called");
-            
-        });
+        var data = {
+            "options[0][name]" : "",
+            "options[0][value]" : ""
+        };        
+        data.courseid = localStorage.getItem("current_course");
+                
+        moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers, {});
             
     });
     
