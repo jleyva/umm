@@ -2,6 +2,7 @@
 "auth" : "sites",
 "cache_time" : 300000,
 "lang" : "en",
+"languages": {"es": "Español", "en": "English"},
 "modules" : "upload,participants,contents,web,help",
 "theme" : "standard",
 "theme_mod_icons": 0,

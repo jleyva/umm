@@ -1,56 +1,50 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>umm: Unofficial Moodle Mobile App</title> 
-    <link rel="stylesheet" href="lib/jquery.mobile.1.0rc2.css" />
-    <link rel="stylesheet" href="lib/umoodle.css" />
-    <script type="text/javascript" charset="utf-8" src="lib/phonegap.1.2.0.js"></script>
-    <script src="lib/jquery.js"></script>
-    <script src="lib/xml2json.js"></script>
-    <script src="lib/md5.js"></script>
-    <script src="lib/common.js"></script>
-    <script src="lib/jquery.mobile.1.0rc2.js"></script>
-</head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>umm: Unofficial Moodle Mobile App</title>
+    <script type="text/javascript" charset="utf-8" src="../../lib/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" id="debugscript" data-wwwpath="../.." src="../../lib/debug.js"></script>
+</head>
 
-<body> 
+<body>
 
 <div data-role="page" id="page-user">
 
     <div data-role="header">
         <a href="users.html" id="bback" data-icon="arrow-l"><span data-lang="back">Back</span></a>
-        <h1><span data-lang="details">Details</span></h1>        
+        <h1><span data-lang="details">Details</span></h1>
     </div><!-- /header -->
 
-    <div data-role="content">            
+    <div data-role="content">
         <div id="userinfo">
             <p><img id="userimage" src=""><strong><span id="userfullname"></span></strong></p>
         </div>
-        
+
         <p><b><span data-lang="description">Description</span>:</p>
         <div class="whiteroundtable" id="descripcion">
         </div>
-        
+
         <p><b><span data-lang="contact">Contact</span>:
         <div class="whiteroundtable">
         <b><span data-lang="email">Email</span>:</b> <span id="email"></span>
         </div>
-        
+
         <p><b><span data-lang="location">Location</span>:
         <div class="whiteroundtable">
         <p><b><span data-lang="country">Country</span>:</b> <span id="country"></span></p>
         <p><b><span data-lang="city">City</span>:</b> <span id="city"></span></p>
         </div>
-        
+
         <a href="sendmessage.html" data-role="button" ><span data-lang="sendamessage">Send a message</span></a>
         <a href="addnote.html" data-role="button" data-inline="true"><span data-lang="addanote">Add a note</span></a>
         <a id="baddcontact" data-role="button" data-inline="true"><span data-lang="addascontact">Add as contact</span></a>
     </div><!-- /content -->
-    
+
     <script type="text/javascript" src="lib/pages/user.js"></script>
-    
+
 </div><!-- /page -->
 
 </body>

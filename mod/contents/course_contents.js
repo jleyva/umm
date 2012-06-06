@@ -4,8 +4,8 @@
 
     $("#page-course_contents").live('pageshow',function() {
                 
-        setupPage();
-        logInfo("Page show fired");
+        UMM.setupPage();
+        UMM.logInfo("Page show fired");
         
         var tokens = localStorage.getItem("tokens");
         var tokens = JSON.parse(tokens);

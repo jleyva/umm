@@ -2,8 +2,8 @@
 
     $("#page-contents").live('pageshow',function() {
                 
-        setupPage();
-        logInfo("Page show fired");
+        UMM.setupPage();
+        UMM.logInfo("Page show fired");
         
         // Check if the current site is not 2.0 or 2.1
         var sites = localStorage.getItem("sites");

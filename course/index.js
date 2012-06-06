@@ -12,9 +12,13 @@
                 $("#course"+course.id).click(function(){
                     var courseId = $(this).attr('data-courseid');
                     // Where to redirect.
-                    var destination = UMM.requiredParam("destinationcourse");
+                    var destination = UMM.requiredParam("firstdestination");
+                    var secondDestination = UMM.requiredParam("seconddestination");
 
-                    UMM.setParams({courseid: courseId});
+                    UMM.setParams({
+                                    courseid: courseId,
+                                    firstdestination: secondDestination
+                    });
                     $.mobile.changePage(destination);
                 });
             });

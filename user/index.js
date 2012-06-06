@@ -18,7 +18,8 @@
             
             $('[data-userid]').click(function(){                        
                 localStorage.setItem("current_user",$(this).attr('data-userid'))
-                $.mobile.changePage("user.html");
+                var destination = UMM.requiredParam("firstdestination");
+                $.mobile.changePage(destination);
             });
             
             $('#lusers').listview('refresh');        
@@ -28,9 +29,9 @@
             "options[0][name]" : "",
             "options[0][value]" : ""
         };        
-        data.courseid = localStorage.getItem("current_course");
+        data.courseid = UMM.requiredParam("courseid");
                 
-        moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers, {});
+        moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers);
             
     });
     

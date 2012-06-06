@@ -2,8 +2,8 @@ UMM.mod.participants = {
 
     cfg: {},
 
-    init: function (){        
-        return;  
+    init: function (){
+        return;
     },
 
     renderButton: function() {
@@ -24,5 +24,5 @@ UMM.mod.participants = {
                         </span>\
                     </a>';
     }
-    
+
 }

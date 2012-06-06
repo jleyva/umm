@@ -2,8 +2,8 @@ UMM.mod.upload = {
 
     cfg: {},
 
-    init: function (){        
-        return;  
+    init: function (){
+        return;
     },
 
     renderButton: function() {
@@ -24,5 +24,5 @@ UMM.mod.upload = {
                         </span>\
                     </a>';
     }
-    
+
 }

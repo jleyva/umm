@@ -4,7 +4,7 @@ $("#page-addsite").live('pageshow',function() {
 
     UMM.setupPage();
     UMM.logInfo("Page show fired");
-    
+
     console.log(UMM.cfg);
 
     $("#bcancel").click(function(){
@@ -64,9 +64,9 @@ $("#page-addsite").live('pageshow',function() {
 
         function addSite(site) {
 
-            // Call to the API for complete the user login.            
+            // Call to the API for complete the user login.
             UMM.completeUserLogin(site, mytoken);
-            
+
             $.mobile.changePage(UMM.cfg.wwwroot + "/main.html", 'slideup');
         }
 

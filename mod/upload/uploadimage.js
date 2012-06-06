@@ -4,16 +4,16 @@ var imageURI;
 
 $("#bupload").click(function(){
     var d = new Date();
-    
+
     var options = {};
     options.fileKey="file";
     options.fileName="image_"+d.getTime()+".jpg";
     options.mimeType="image/jpeg";
-    
-    moodleUploadFile(imageURI, options, function(){ popMessage("File uploaded"); }, function(){ popErrorMessage('Upload failed'); });       
+
+    moodleUploadFile(imageURI, options, function(){ popMessage("File uploaded"); }, function(){ popErrorMessage('Upload failed'); });
 });
 
-var onSuccess = function(uri) {           
+var onSuccess = function(uri) {
     $('#camera-image').css({
         'background-image': 'url('+uri+')',
         'background-size':  '100%'
@@ -27,12 +27,12 @@ var onFail = function() {
 };
 
 function handleAction(){
-    
+
     if(navigator.camera){
         var action = localStorage.getItem('upload_action');
-        
+
         logInfo("Processing image "+action);
-        
+
         if(action == 'takephoto'){
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 50,
@@ -49,18 +49,18 @@ function handleAction(){
     }
 }
 
-    
+
 (function() {
 
         $("#page-uploadimage").live('pageshow',function() {
-            
+
             logInfo("Page show fired");
-            
+
             // We are emulating over Ripple
             // This is a fake return of the Phonegap API for testing pourpuses
             if(typeof(navigator) == 'undefined' || typeof(navigator.camera) == 'undefined' ||  typeof(navigator.camera.PictureSourceType) == 'undefined'){
                     logInfo("Emulating phone, not using a real device");
-                    
+
                     window.navigator = {
                         camera: {
                             getPicture: function(onSuccess, onFail, options) {
@@ -75,9 +75,9 @@ function handleAction(){
                         }
                     };
             }
-            
+
             logInfo("Waiting for cammera");
             setTimeout('handleAction()',500);
-            
-        });    
+
+        });
 })();
