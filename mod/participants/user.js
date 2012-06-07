@@ -5,11 +5,11 @@
         UMM.setupPage();
         UMM.logInfo("Page show fired");
 
-        var currentUser;
+        var currentUser = UMM.requiredParam("current_user");
 
         var users = UMM.getCacheElements('users');
         $.each(users, function(index, user){
-            if(user.id+"" == UMM.cfg.current_userid){
+            if(user.id+"" == currentUser){
                 // TODO - Replace when bug related with cookies fixed
                 user.profileimageurl = "http://demo.moodle.net/theme/image.php?theme=standard&image=u%2Ff1";
 

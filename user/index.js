@@ -16,12 +16,14 @@
                 $("#lusers").append('<li><a href="user.html" id="user'+user.id+'" data-userid="'+user.id+'"><img src="'+user.profileimageurl+'">'+user.fullname+'</a></li>');                
             });
             
-            $('[data-userid]').click(function(){                        
-                localStorage.setItem("current_user",$(this).attr('data-userid'))
+            $('[data-userid]').click(function(){
+                UMM.setParams({
+                                current_user: $(this).attr('data-userid')
+                });
                 var destination = UMM.requiredParam("firstdestination");
                 $.mobile.changePage(destination);
             });
-            
+
             $('#lusers').listview('refresh');        
         }
         
@@ -31,7 +33,7 @@
         };        
         data.courseid = UMM.requiredParam("courseid");
                 
-        moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers);
+        UMM.moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers);
             
     });
     
