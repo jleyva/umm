@@ -1,4 +1,4 @@
-UMM.mod.web = {
+MM.mod.web = {
 
     cfg: {},
 
@@ -7,10 +7,10 @@ UMM.mod.web = {
     },
 
     renderButton: function() {
-        var iconurl = UMM.cfg.wwwroot + "/";
+        var iconurl = MM.cfg.wwwroot + "/";
 
-        if (parseInt(UMM.cfg.theme_mod_icons)) {
-            iconurl += UMM.cfg.theme + "/pix/i/web.png";
+        if (parseInt(MM.cfg.theme_mod_icons)) {
+            iconurl += MM.cfg.theme + "/pix/i/web.png";
         } else {
             iconurl += "mod/web/icon.png";
         }
@@ -27,7 +27,7 @@ UMM.mod.web = {
 
     postRenderButton: function() {
         $("#linkweb").click(function(event){                
-                $(this).attr("href",UMM.cfg.current_siteurl)
+                $(this).attr("href",MM.cfg.current_siteurl)
             });
     }
 }

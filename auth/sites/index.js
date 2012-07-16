@@ -2,10 +2,10 @@
 
 $("#page-addsite").live('pageshow',function() {
 
-    UMM.setupPage();
-    UMM.logInfo("Page show fired");
+    MM.setupPage();
+    MM.logInfo("Page show fired");
 
-    console.log(UMM.cfg);
+    console.log(MM.cfg);
 
     $("#bcancel").click(function(){
         window.close();
@@ -22,8 +22,8 @@ $("#page-addsite").live('pageshow',function() {
     $("#bsave").click(function(){
 
         // Check if we are connected to Internet
-        if(! UMM.connectionOn){
-            UMM.popErrorMessage("Internet connection required to perform this action");
+        if(! MM.connectionOn){
+            MM.popErrorMessage("Internet connection required to perform this action");
             return;
         }
 
@@ -58,16 +58,16 @@ $("#page-addsite").live('pageshow',function() {
         }
 
         if(stop){
-            UMM.popErrorMessage(msg);
+            MM.popErrorMessage(msg);
             return;
         }
 
         function addSite(site) {
 
             // Call to the API for complete the user login.
-            UMM.completeUserLogin(site, mytoken);
+            MM.completeUserLogin(site, mytoken);
 
-            $.mobile.changePage(UMM.cfg.wwwroot + "/main.html", 'slideup');
+            $.mobile.changePage(MM.cfg.wwwroot + "/main.html", 'slideup');
         }
 
         $.mobile.showPageLoadingMsg();
@@ -75,7 +75,7 @@ $("#page-addsite").live('pageshow',function() {
             {
                 username: username,
                 password: password,
-                service: UMM.cfg.wsservice
+                service: MM.cfg.wsservice
             }
             ,function(json) {
                 if(typeof(json.token) != 'undefined'){
@@ -86,11 +86,11 @@ $("#page-addsite").live('pageshow',function() {
                         wstoken: mytoken,
                         siteurl: siteurl
                     }
-                    UMM.moodleWSCall('moodle_webservice_get_siteinfo', data, addSite, preSets);
+                    MM.moodleWSCall('moodle_webservice_get_siteinfo', data, addSite, preSets);
 
                 }
                 else{
-                    UMM.popErrorMessage("Problem connecting to the Moodle site");
+                    MM.popErrorMessage("Problem connecting to the Moodle site");
                 }
             });
     });

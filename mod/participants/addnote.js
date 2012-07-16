@@ -1,5 +1,5 @@
 (function() {
-    UMM.setupPage();
+    MM.setupPage();
 
     $("#page-addnote").live('pageshow',function() {
         setTimeout(function(){

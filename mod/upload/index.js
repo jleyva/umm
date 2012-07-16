@@ -1,6 +1,6 @@
 (function() {
 
-    UMM.setupPage();
+    MM.setupPage();
 
     $("#btake").click(function(){
         localStorage.setItem('upload_action','takephoto');
@@ -22,16 +22,16 @@
             options.fileName = mediaFiles[i].name;
             options.mimeType = null;
 
-            UMM.moodleUploadFile(mediaFiles[i].fullPath, options, function(){ UMM.popMessage("File uploaded"); }, function(){ UMM.popErrorMessage('Upload failed'); });
+            MM.moodleUploadFile(mediaFiles[i].fullPath, options, function(){ MM.popMessage("File uploaded"); }, function(){ MM.popErrorMessage('Upload failed'); });
         }
     }
 
     function captureError(error) {
-        UMM.popErrorMessage('Audio recording failed');
+        MM.popErrorMessage('Audio recording failed');
     }
 
     $("#brecord").click(function(){
-        UMM.logInfo("Trying to capture audio");
+        MM.logInfo("Trying to capture audio");
         navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 1});
     });
 

@@ -2,11 +2,11 @@
 
     $("#page-users").live('pageshow',function() {        
         
-        UMM.setupPage();
-        UMM.logInfo("Page show fired");
+        MM.setupPage();
+        MM.logInfo("Page show fired");
         
         function listUsers(users){
-            UMM.pushCacheElements('users',users);
+            MM.pushCacheElements('users',users);
             $("#lusers li").remove();
             
             $.each(users, function(index,user){
@@ -17,10 +17,10 @@
             });
             
             $('[data-userid]').click(function(){
-                UMM.setParams({
+                MM.setParams({
                                 current_user: $(this).attr('data-userid')
                 });
-                var destination = UMM.requiredParam("firstdestination");
+                var destination = MM.requiredParam("firstdestination");
                 $.mobile.changePage(destination);
             });
 
@@ -31,9 +31,9 @@
             "options[0][name]" : "",
             "options[0][value]" : ""
         };        
-        data.courseid = UMM.requiredParam("courseid");
+        data.courseid = MM.requiredParam("courseid");
                 
-        UMM.moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers);
+        MM.moodleWSCall('moodle_user_get_users_by_courseid', data, listUsers);
             
     });
     

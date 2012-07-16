@@ -2,12 +2,12 @@
 
     $("#page-user").live('pageshow',function() {
 
-        UMM.setupPage();
-        UMM.logInfo("Page show fired");
+        MM.setupPage();
+        MM.logInfo("Page show fired");
 
-        var currentUser = UMM.requiredParam("current_user");
+        var currentUser = MM.requiredParam("current_user");
 
-        var users = UMM.getCacheElements('users');
+        var users = MM.getCacheElements('users');
         $.each(users, function(index, user){
             if(user.id+"" == currentUser){
                 // TODO - Replace when bug related with cookies fixed
@@ -26,7 +26,7 @@
         });
 
         $("#baddcontact").click(function(){
-            UMM.logInfo("Adding a contact");
+            MM.logInfo("Adding a contact");
 
             var myContact = navigator.contacts.create();
             myContact.displayName = currentUser.fullname;
@@ -45,12 +45,12 @@
             photos[0] = new ContactField('url', currentUser.profileimageurl, true);
             myContact.photos = photos;
 
-            UMM.logInfo("Saving contact ("+myContact.displayName+"  "+myContact.nickname+"), calling phonegap");
+            MM.logInfo("Saving contact ("+myContact.displayName+"  "+myContact.nickname+"), calling phonegap");
             myContact.save(
                 function(contact){ popMessage('Contact added'); },
                 function(contactError){ popErrorMessage('Unexpected error. Contact not added: '+contactError); }
             );
-            UMM.logInfo("End of saving contact, phonegap called");
+            MM.logInfo("End of saving contact, phonegap called");
 
         });
 

@@ -2,8 +2,8 @@
 
     $("#page-mysites").live('pagebeforeshow',function() {
 
-        UMM.setupPage();
-        UMM.logInfo("Page before show fired");
+        MM.setupPage();
+        MM.logInfo("Page before show fired");
 
         var sites = localStorage.getItem("sites");
 

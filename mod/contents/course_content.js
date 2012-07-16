@@ -3,8 +3,8 @@
 
     $("#page-course_content").live('pagebeforeshow',function() {
 
-        UMM.setupPage();
-        UMM.logInfo("Page show fired");
+        MM.setupPage();
+        MM.logInfo("Page show fired");
 
         var tokens = localStorage.getItem("tokens");
         var tokens = JSON.parse(tokens);

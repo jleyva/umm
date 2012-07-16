@@ -19,7 +19,7 @@ var onSuccess = function(uri) {
         'background-size':  '100%'
     });
     imageURI = uri;
-    UMM.logInfo("Image loaded");
+    MM.logInfo("Image loaded");
 };
 
 var onFail = function() {
@@ -31,7 +31,7 @@ function handleAction(){
     if(navigator.camera){
         var action = localStorage.getItem('upload_action');
 
-        UMM.logInfo("Processing image "+action);
+        MM.logInfo("Processing image "+action);
 
         if(action == 'takephoto'){
             navigator.camera.getPicture(onSuccess, onFail, {
@@ -54,12 +54,12 @@ function handleAction(){
 
         $("#page-uploadimage").live('pageshow',function() {
 
-            UMM.logInfo("Page show fired");
+            MM.logInfo("Page show fired");
 
             // We are emulating over Ripple
             // This is a fake return of the Phonegap API for testing pourpuses
             if(typeof(navigator) == 'undefined' || typeof(navigator.camera) == 'undefined' ||  typeof(navigator.camera.PictureSourceType) == 'undefined'){
-                    UMM.logInfo("Emulating phone, not using a real device");
+                    MM.logInfo("Emulating phone, not using a real device");
 
                     window.navigator = {
                         camera: {
@@ -76,7 +76,7 @@ function handleAction(){
                     };
             }
 
-            UMM.logInfo("Waiting for cammera");
+            MM.logInfo("Waiting for cammera");
             setTimeout('handleAction()',500);
 
         });

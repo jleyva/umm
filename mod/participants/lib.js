@@ -1,4 +1,4 @@
-UMM.mod.participants = {
+MM.mod.participants = {
 
     cfg: {},
 
@@ -7,15 +7,15 @@ UMM.mod.participants = {
     },
 
     renderButton: function() {
-        var iconurl = UMM.cfg.wwwroot + "/";
+        var iconurl = MM.cfg.wwwroot + "/";
 
-        if (parseInt(UMM.cfg.theme_mod_icons)) {
-            iconurl += UMM.cfg.theme + "/pix/i/participants.png";
+        if (parseInt(MM.cfg.theme_mod_icons)) {
+            iconurl += MM.cfg.theme + "/pix/i/participants.png";
         } else {
             iconurl += "mod/participants/icon.png";
         }
 
-        return '<a href="' + UMM.cfg.wwwroot + "/mod/participants/index.html" + '" style="text-decoration: none">\
+        return '<a href="' + MM.cfg.wwwroot + "/mod/participants/index.html" + '" style="text-decoration: none">\
                         <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">\
                             <br/>\
                             <img src="' + iconurl + '"><br/>\

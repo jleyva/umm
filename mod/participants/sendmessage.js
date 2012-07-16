@@ -2,8 +2,8 @@
 
     $("#page-sendmessage").live('pageshow',function() {
 
-        UMM.setupPage();
-        UMM.logInfo("Page show fired");
+        MM.setupPage();
+        MM.logInfo("Page show fired");
 
         setTimeout(function(){
             $("#textarea-a").focus();

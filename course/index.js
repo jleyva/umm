@@ -2,8 +2,8 @@
 
     $("#page-mycourses").live('pageshow',function() {
 
-        UMM.setupPage();
-        UMM.logInfo("Page show fired");
+        MM.setupPage();
+        MM.logInfo("Page show fired");
 
         function listCourses(courses){
             $('#lmycourses li').remove();
@@ -12,10 +12,10 @@
                 $("#course"+course.id).click(function(){
                     var courseId = $(this).attr('data-courseid');
                     // Where to redirect.
-                    var destination = UMM.requiredParam("firstdestination");
-                    var secondDestination = UMM.requiredParam("seconddestination");
+                    var destination = MM.requiredParam("firstdestination");
+                    var secondDestination = MM.requiredParam("seconddestination");
 
-                    UMM.setParams({
+                    MM.setParams({
                                     courseid: courseId,
                                     firstdestination: secondDestination
                     });
@@ -26,10 +26,10 @@
         }
 
         var data = {
-            userid: UMM.cfg.current_userid
+            userid: MM.cfg.current_userid
         };
 
-        UMM.moodleWSCall('moodle_enrol_get_users_courses', data, listCourses);
+        MM.moodleWSCall('moodle_enrol_get_users_courses', data, listCourses);
 
     });
 

@@ -1,4 +1,4 @@
-UMM.mod.upload = {
+MM.mod.upload = {
 
     cfg: {},
 
@@ -7,15 +7,15 @@ UMM.mod.upload = {
     },
 
     renderButton: function() {
-        var iconurl = UMM.cfg.wwwroot + "/";
+        var iconurl = MM.cfg.wwwroot + "/";
 
-        if (parseInt(UMM.cfg.theme_mod_icons)) {
-            iconurl += UMM.cfg.theme + "/pix/i/upload.png";
+        if (parseInt(MM.cfg.theme_mod_icons)) {
+            iconurl += MM.cfg.theme + "/pix/i/upload.png";
         } else {
             iconurl += "mod/upload/icon.png";
         }
 
-        return '<a href="' + UMM.cfg.wwwroot + "/mod/upload/index.html" + '" style="text-decoration: none">\
+        return '<a href="' + MM.cfg.wwwroot + "/mod/upload/index.html" + '" style="text-decoration: none">\
                         <span class="ui-btn ui-btn-icon-top ui-btn-corner-all ui-shadow ui-btn-up-c">\
                             <br/>\
                             <img src="' + iconurl + '"><br/>\

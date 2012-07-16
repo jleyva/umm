@@ -1,12 +1,12 @@
 (function() {
     $("#page-participants").live('pageshow',function() {
         console.log("abc");
-        UMM.setupPage();
-        UMM.setParams({
-                        firstdestination: UMM.cfg.wwwroot + "/user/index.html",
-                        seconddestination: UMM.cfg.wwwroot + "/mod/participants/user.html"
+        MM.setupPage();
+        MM.setParams({
+                        firstdestination: MM.cfg.wwwroot + "/user/index.html",
+                        seconddestination: MM.cfg.wwwroot + "/mod/participants/user.html"
         });
-        $.mobile.changePage(UMM.cfg.wwwroot + "/course/index.html", 'none');
+        $.mobile.changePage(MM.cfg.wwwroot + "/course/index.html", 'none');
     });
 
 })();
